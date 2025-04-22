@@ -2,6 +2,8 @@
 
 int main() {
   // Flush after every std::cout / std:cerr
+  // Activa el modo "unitbuf" (unbuffered) para el stdout y stderr
+  // Imprimirá inmediatamente sin esperar a que el bufer se llene (no hay que poner endl)
   std::cout << std::unitbuf;
   std::cerr << std::unitbuf;
 
@@ -11,4 +13,3 @@ int main() {
   std::string input;
   std::getline(std::cin, input);
 }
-2
