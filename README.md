@@ -1,34 +1,32 @@
-[![progress-banner](https://backend.codecrafters.io/progress/shell/3ea8b270-d9ed-4764-a506-156440a63dc3)](https://app.codecrafters.io/users/codecrafters-bot?r=2qF)
+# 🐚shh...ell - C++ basic shell
 
-This is a starting point for C++ solutions to the
-["Build Your Own Shell" Challenge](https://app.codecrafters.io/courses/shell/overview).
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp;
+[![forthebadge](https://forthebadge.com/images/badges/works-on-my-machine.svg)](https://forthebadge.com) &nbsp;
 
-In this challenge, you'll build your own POSIX compliant shell that's capable of
-interpreting shell commands, running external programs and builtin commands like
-cd, pwd, echo and more. Along the way, you'll learn about shell command parsing,
-REPLs, builtin commands, and more.
+> Un proyecto personal para construir una shell desde cero, inspirado en Codecrafters.
 
-**Note**: If you're viewing this repo on GitHub, head over to
-[codecrafters.io](https://codecrafters.io) to try the challenge.
+---
 
-# Passing the first stage
+## 🛠️ ¿Qué es esto?
 
-The entry point for your `shell` implementation is in `src/main.cpp`. Study and
-uncomment the relevant code, and push your changes to pass the first stage:
+***Shhell*** es una shell básica desarrollada en C++, como parte de un reto de bajo nivel y aprendizaje de conceptos como REPL, parsing, ejecución de comandos, manejo de errores, y más.
 
-```sh
-git commit -am "pass 1st stage" # any msg
-git push origin master
+---
+
+## 🚀 Cómo usarlo
+
+1. Descarga el repositorio :P
+```bash
+git clone https://www.github.com/missxro/my-shell
+```
+2. Compila el código...
+```bash
+g++ main.cpp -o shhell
 ```
 
-Time to move on to the next stage!
+3. ¡Y disfruta! :D
+```bash
+./shhell
+```
 
-# Stage 2 & beyond
-
-Note: This section is for stages 2 and beyond.
-
-1. Ensure you have `cmake` installed locally
-1. Run `./your_program.sh` to run your program, which is implemented in
-   `src/main.cpp`.
-1. Commit your changes and run `git push origin master` to submit your solution
-   to CodeCrafters. Test output will be streamed to your terminal.
+![En construcción](https://img.shields.io/badge/estado-en%20construcci%C3%B3n-yellow?style=for-the-badge&logo=ghost)

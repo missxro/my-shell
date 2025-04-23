@@ -1,35 +1,37 @@
 #include <iostream>
 #include <set>
 
+using namespace std;
+
 int main() {
 
-  // Flush after every std::cout / std:cerr
+  // Flush after every cout / std:cerr
   // Activa el modo "unitbuf" (unbuffered) para el stdout y stderr
   // Imprimirá inmediatamente sin esperar a que el bufer se llene (no hay que poner endl)
-  std::cout << std::unitbuf;
-  std::cerr << std::unitbuf;
+  cout << unitbuf;
+  cerr << unitbuf;
 
   // Declaro un array con los comandos validos
-  std::set<std::string> valid_commands = {"test", "prueba", "ro"};
+  set<string> valid_commands = {"test", "prueba", "ro"};
 
   // Creo un REPL (Read-Evaluate-Print-Loop)
   while (true){
 
       // # Read
-      std::cout << "$ ";
+      cout << "$ ";
 
       // Declaro la variable "input" que será una string
-      std::string input;
+      string input;
       // Guardo lo que ingrese el usuario en "input"
-      std::getline(std::cin, input);
+      getline(cin, input);
 
       // # Evaluate and Print
 
       if (valid_commands.count(input)) {
-        std::cout << "Comando reconocido: " << input << "\n";
+        cout << "Comando reconocido: " << input << "\n";
       } else {
           // No finalizo con endl porque tenemos el modo ubitbuf activado, solo hago un salto de línea
-          std::cout << input << ": command not found\n";
+          cout << input << ": command not found\n";
       };
 
   };
