@@ -1,4 +1,5 @@
 #include <iostream>
+#include <set>
 
 int main() {
 
@@ -8,13 +9,29 @@ int main() {
   std::cout << std::unitbuf;
   std::cerr << std::unitbuf;
 
-  std::cout << "$ ";
+  // Declaro un array con los comandos validos
+  std::set<std::string> valid_commands = {"test", "prueba", "ro"};
 
-  // Declaro la variable "input" que será una string
-  std::string input;
-  // Guardo lo que ingrese el usuario en "input"
-  std::getline(std::cin, input);
+  // Creo un REPL (Read-Evaluate-Print-Loop)
+  while (true){
 
-  // No finalizo con endl porque tenemos el modo ubitbuf activado, solo hago un salto de línea
-  std::cout << input << ": command not found\n";
+      // # Read
+      std::cout << "$ ";
+
+      // Declaro la variable "input" que será una string
+      std::string input;
+      // Guardo lo que ingrese el usuario en "input"
+      std::getline(std::cin, input);
+
+      // # Evaluate and Print
+
+      if (valid_commands.count(input)) {
+        std::cout << "Comando reconocido: " << input << "\n";
+      } else {
+          // No finalizo con endl porque tenemos el modo ubitbuf activado, solo hago un salto de línea
+          std::cout << input << ": command not found\n";
+      };
+
+  };
+
 }
